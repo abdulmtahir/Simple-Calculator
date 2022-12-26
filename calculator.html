@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="calc-parent">
+        <div class="row">
+            <div class="circles">
+                <div class="circles-left">
+                    <div class="dots1"></div>
+                    <div class="dots2"></div>
+                    <div class="dots3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="screen" id="calc-val">0</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn tops column" id="clear">AC</div>
+            <div class="calc-btn tops column" id="plus-minus">+/-</div>
+            <div class="calc-btn tops column" id="percent">%</div>
+            <div class="calc-btn btn-operator column" id="divide">&divide;</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn btn-num column">7</div>
+            <div class="calc-btn btn-num column">8</div>
+            <div class="calc-btn btn-num column">9</div>
+            <div class="calc-btn btn-operator column">x</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn btn-num column">4</div>
+            <div class="calc-btn btn-num column">5</div>
+            <div class="calc-btn btn-num column">6</div>
+            <div class="calc-btn btn-operator column">-</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn btn-num column">1</div>
+            <div class="calc-btn btn-num column">2</div>
+            <div class="calc-btn btn-num column">3</div>
+            <div class="calc-btn btn-operator column">+</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn btn-num column" id="calc-zero">0</div>
+            <div class="calc-btn column" id="decimal">.</div>
+            <div class="calc-btn btn-operator column" id="equal">=</div>
+        </div>
+    </div>
+    
+<!-- <script>
+document.addEventListener.onclick = performOperation;
+var decimalBtn = document.getElementById('decimal');
+var clearBtn = document.getElementById('clear');
+var displayValElement = document.getElementById('calc-val');
+
+var displayVal = '0';
+var pendingVal;
+var evalStringArray = [];
+
+var calcNumBtns = document.getElementsByClassName('btn-num');
+var calcOperatorBtns =  document.getElementsByClassName('btn-operator');
+
+var updateDisplayVal = (clickobj) => {
+    var btnText = clickobj.target.innerText;
+
+    if (displayVal === '0')
+        displayVal = '';
+
+    displayVal += btnText;
+    displayValElement.innerText = displayVal;
+}
+
+var performOperation = (clickobj) => {
+    var operator = clickobj.target.innerText;
+
+    switch (operator) {
+        case '+':
+            pendingVal = displayVal;
+            displayVal = '0';
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('+');
+            break;
+
+            case '-':
+            pendingVal = displayVal;
+            displayVal = '0';
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('-');
+            break;
+
+        case 'x':
+            pendingVal = displayVal;
+            displayVal = '0';
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('*');
+            break;
+
+        case '÷':
+            pendingVal = displayVal;
+            displayVal = '0';
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('/');
+            break;
+
+        case '=':
+            evalStringArray.push(displayVal);
+            var evaluation = eval(evalStringArray.join(''));
+            displayVal= evaluation + '';
+            displayValElement.innerText = displayVal;
+            evalStringArray = [];
+            break;
+
+            default:
+                break;
+        }
+
+}
+
+for ( let i = 0; i < calcNumBtns.length; i++){
+    calcNumBtns[i].addEventListener('click', updateDisplayVal, false);
+}
+
+for ( let i = 0; i < calcOperatorBtns.length; i++){
+    calcOperatorBtns[i].addEventListener('click', performOperation, false);
+}
+
+clearBtn.onclick = () => {
+    displayVal = '0';
+    pendingVal = undefined;
+    evalStringArray = [];
+    displayValElement.innerText = displayVal;
+}
+
+decimalBtn.onclick = () => {
+    if (!displayVal.includes('.'))
+            displayVal += '.';
+    displayValElement.innerText = displayVal;
+}
+
+    </script> -->
+</body>
+</html>
